@@ -7,9 +7,7 @@ workflows:
     scripts:
       - name: Get packages
         script: flutter pub get
-      - name: Fix lint
-        script: |
-          sed -i 's/import .dart:math. as math;//g' lib/main.dart
+      
       - name: Build APK
         script: flutter build apk --release --no-shrink
     artifacts:
